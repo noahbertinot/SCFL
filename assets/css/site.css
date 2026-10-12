@@ -221,9 +221,7 @@ a:hover { color: var(--cobalt-dark); text-decoration-thickness: 2px; }
   /* Hover bridge so the menu doesn't close in the gap */
   .submenu::before { content: ""; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
 }
-@media (min-width: 1040px) and (hover: hover) {
-  .nav-list > li:hover > .submenu { display: block; }
-}
+/* With JavaScript, hover is handled in site.js so the arrow always matches the menu */
 
 /* Mobile and tablet navigation */
 @media (max-width: 1039.98px) {
