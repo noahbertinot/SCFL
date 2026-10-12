@@ -47,6 +47,25 @@
     });
 
     var item = btn.parentElement;
+    var HOVER = window.matchMedia("(hover: hover)");
+    var hoverClosed = false;   // set when the arrow is clicked shut while hovering
+
+    item.addEventListener("mouseenter", function () {
+      if (!DESKTOP.matches || !HOVER.matches || hoverClosed) return;
+      closeAll(btn);
+      btn.setAttribute("aria-expanded", "true");
+    });
+    item.addEventListener("mouseleave", function () {
+      hoverClosed = false;
+      if (!DESKTOP.matches || !HOVER.matches) return;
+      if (item.contains(document.activeElement) && document.activeElement !== btn) return; // keyboard user inside
+      btn.setAttribute("aria-expanded", "false");
+    });
+    btn.addEventListener("click", function () {
+      // Clicking the arrow shut keeps it shut until the mouse leaves
+      hoverClosed = btn.getAttribute("aria-expanded") === "false";
+    });
+
     item.addEventListener("focusout", function (e) {
       if (DESKTOP.matches && !item.contains(e.relatedTarget)) {
         btn.setAttribute("aria-expanded", "false");
