@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measurement as a Service – SCFL</title>
+<meta name="description" content="How organizations could read SCFL on data they already hold: infrastructure owners, shippers, reinsurers and funds, and the terms of a first pilot.">
+<meta property="og:title" content="Measurement as a Service – SCFL">
+<meta property="og:description" content="How organizations could read SCFL on data they already hold: infrastructure owners, shippers, reinsurers and funds, and the terms of a first pilot.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SCFL – Standard Coherence Fidelity Layer">
+<meta name="theme-color" content="#0e1b33">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<!-- site-header:start -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="SCFL, Standard Coherence Fidelity Layer: home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#b3261e" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#0e1b33"/><circle cx="5" cy="34" r="3.6" fill="#0e1b33"/>
+        <circle cx="35" cy="34" r="3.6" fill="#0e1b33"/><circle cx="20" cy="24" r="3.6" fill="#0e1b33"/>
+      </svg>
+      <span class="brand-text"><span class="brand-name">SCFL</span><span class="brand-full">Standard Coherence Fidelity Layer</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item" data-section="about">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-about">About SCFL <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-about">
+            <li><a href="index.html"><span class="sm-title">Overview</span><span class="sm-desc">What SCFL measures, in brief</span></a></li>
+            <li><a href="measurement-problem.html"><span class="sm-title">The measurement problem</span><span class="sm-desc">Why sound parts can sit inside a failing structure</span></a></li>
+            <li><a href="approach.html"><span class="sm-title">The SCFL approach</span><span class="sm-desc">The construct, the instrument, and what each one claims</span></a></li>
+            <li><a href="index.html#is-and-is-not"><span class="sm-title">What SCFL is and is not</span><span class="sm-desc">Including why it is not an early warning system</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="applications">
+          <button class="nav-button is-current" type="button" aria-expanded="false" aria-controls="menu-applications">Applications <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-applications">
+            <li><a href="applications.html"><span class="sm-title">Applications and case studies</span><span class="sm-desc">Domains studied so far, with evidence status</span></a></li>
+            <li><a href="case-texas-grid.html"><span class="sm-title">Texas grid, February 2021</span><span class="sm-desc">Winter Storm Uri, read retrospectively</span></a></li>
+            <li><a href="case-fukushima.html"><span class="sm-title">Fukushima Daiichi, 2011</span><span class="sm-desc">A cascade across four units and many years</span></a></li>
+            <li><a href="measurement-as-a-service.html" aria-current="page"><span class="sm-title">Measurement as a Service</span><span class="sm-desc">How organizations could read SCFL on their own data</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="research">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-research">Research <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-research">
+            <li><a href="research.html"><span class="sm-title">Research program</span><span class="sm-desc">The sequence of tests and how the program could fail</span></a></li>
+            <li><a href="research.html#evidence-status"><span class="sm-title">Evidence status</span><span class="sm-desc">What is demonstrated, exploratory, hypothesized or planned</span></a></li>
+            <li><a href="papers.html"><span class="sm-title">Publications</span><span class="sm-desc">Papers and preprints, with DOIs</span></a></li>
+            <li><a href="videos.html"><span class="sm-title">Videos</span><span class="sm-desc">Short films from the program</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="collaborate">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-collaborate">Collaborate <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-collaborate">
+            <li><a href="collaborate.html"><span class="sm-title">Collaboration and contact</span><span class="sm-desc">For researchers, domain partners and organizations</span></a></li>
+            <li><a href="one-question.html"><span class="sm-title">One Question Challenge</span><span class="sm-desc">A low-commitment first structural reading</span></a></li>
+            <li><a href="register.html"><span class="sm-title">Register for the challenge</span><span class="sm-desc">For officers and board members</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+      </ul>
+      <a class="nav-cta" href="collaborate.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- site-header:end -->
+<main id="main" tabindex="-1">
+<div class="page-head">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="applications.html">Applications</a></li><li aria-current="page">Measurement as a Service</li></ol></nav>
+    <h1>Measurement as a Service</h1>
+    <p class="lede">One measurement layer, read by different parties on their own clocks, on data they already hold. It does not replace the forecast.</p>
+    
+  </div>
+</div>
+<section class="band">
+  <div class="wrap split split--2">
+    <div class="prose">
+      <h2>What it is</h2>
+      <p>Measurement as a Service is the program’s proposed way to deliver SCFL. A partner’s own data is read through the SCFL measurement layer, in place, without new infrastructure.</p>
+      <p>Forecasts, catastrophe models, actuarial engines and enterprise risk systems keep doing what they do. The layer underneath reports the state of the structure: where the seams are, how much capacity remains, how the tail is decaying.</p>
+      <p><strong>The service reports a state. It does not predict.</strong></p>
+    </div>
+    <div class="callout callout--plain">
+      <p><strong>Status.</strong> No commercial deployment is claimed on this site. The Texas grid readings are public structure tests, not live capital tests. The program is seeking its first pilot partners.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="readers-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="readers-h">Different readers, different clocks</h2>
+      <p>The same cascade looks different from each seat. Each party reads the part it already owns.</p>
+    </div>
+    <ul class="case-list">
+      <li><div class="when">Infrastructure owner</div><div><h3>Remaining capacity, not a date</h3><p>A port or a plant reads the seam on its own telemetry: power, cooling, the wall, the neighbouring unit.</p></div></li>
+      <li><div class="when">Shipper</div><div><h3>The lane can stay on the map while confidence does not</h3><p>A shock in one layer, replenishment failing in the next: the strait, the bill of lading, the schedule.</p></div></li>
+      <li><div class="when">Reinsurer</div><div><h3>A closed year first</h3><p>A pilot on one book the reinsurer already holds: pricing against realized outcomes, claims against the legal environment, hazard against exposure. If half-life contracts while results are still stationary, that is a recoverability reading. If it does not, the claim fails on that book. The decision stays with the reinsurer.</p>
+      <p class="muted">The idea of moving from reactive indemnity to continuous risk observation is labeled speculative, not because the measurement is untested but because real-time testing on a book that pays claims is scant.</p></div></li>
+      <li><div class="when">Sovereign or patient-capital fund</div><div><h3>Not the event: the system under the holding</h3><p>Whether the system beneath a holding can replenish itself after the ripple has moved.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="pilot-h">
+  <div class="wrap split split--2">
+    <div class="prose">
+      <h2 id="pilot-h">Terms of a first pilot</h2>
+      <ul>
+        <li><strong>One partner, one plate.</strong> A single dataset the partner already owns.</li>
+        <li><strong>In place.</strong> No new infrastructure and no new sensors.</li>
+        <li><strong>A fixed set of operators.</strong> Six frozen operators (DRIFT, SHIFT, RUPTURE, KINETIC, QUENCH, STRESS), a closed set rather than a growing vocabulary. Any of them can be refused, plate by plate.</li>
+        <li><strong>Open specification, not a black box.</strong></li>
+        <li><strong>Honest about evidence.</strong> A deposit is not peer review.</li>
+      </ul>
+    </div>
+    <div class="prose">
+      <h2>Disclosure</h2>
+      <p>Ronald L. Brogdon is a named inventor on pending patent applications related to the SCFL/UCMS measurement framework.</p>
+      <div class="actions">
+        <a class="btn" href="one-question.html">Start with one question</a>
+        <a class="btn btn--quiet" href="collaborate.html#contact">Contact the program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="maas-video-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="maas-video-h">Film</h2></div>
+    <figure class="video video--feature">
+  <video controls preload="none" playsinline poster="assets/video/maas-from-the-plates.jpg">
+    <source src="assets/video/maas-from-the-plates.mp4" type="video/mp4">
+    Your browser cannot play this video. <a href="assets/video/maas-from-the-plates.mp4">Download the video file</a>.
+  </video>
+  <figcaption>
+    <h3>Measurement as a Service: from the plates</h3>
+    <p class="vmeta">3 min 59 s</p>
+    
+    <p>From the Fukushima plate to the four readers who could use it, the six frozen operators, and the ask: one partner, one plate they already own.</p>
+  </figcaption>
+</figure>
+  </div>
+</section>
+</main>
+<!-- site-footer:start -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#ff8a80" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#ffffff"/><circle cx="5" cy="34" r="3.6" fill="#ffffff"/>
+        <circle cx="35" cy="34" r="3.6" fill="#ffffff"/><circle cx="20" cy="24" r="3.6" fill="#ffffff"/>
+      </svg>
+      <div>
+        <strong>Standard Coherence Fidelity Layer</strong>
+        <p>An independent research program originated by Ronald L. Brogdon, Upstream Coherence Measurement Stratum (UCMS).</p>
+      </div>
+    </div>
+    <div>
+      <h2>Research</h2>
+      <ul>
+        <li><a href="https://doi.org/10.5281/zenodo.23247214">Foundational paper (DOI)</a></li>
+        <li><a href="papers.html">All publications</a></li>
+        <li><a href="research.html#evidence-status">Evidence status</a></li>
+        <li><a href="https://orcid.org/0009-0009-0507-2971">ORCID record for Ronald L. Brogdon</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>About</h2>
+      <ul>
+        <li><a href="measurement-problem.html">The measurement problem</a></li>
+        <li><a href="approach.html">The SCFL approach</a></li>
+        <li><a href="applications.html">Applications and case studies</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="collaborate.html">Collaborate with the program</a></li>
+        <li><a href="one-question.html">One Question Challenge</a></li>
+        <li><a href="mailto:measurement@coherencemanagement.org">measurement@coherencemanagement.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year">2026</span> Ronald L. Brogdon. All rights reserved.</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+<!-- site-footer:end -->
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCFL – Standard Coherence Fidelity Layer</title>
+<meta name="description" content="SCFL measures the geometry of relational coherence in a system&#x27;s state space: how relationships are organized, how they constrain a system, and whether its structure stays recoverable under load.">
+<meta property="og:title" content="SCFL – Standard Coherence Fidelity Layer">
+<meta property="og:description" content="SCFL measures the geometry of relational coherence in a system&#x27;s state space: how relationships are organized, how they constrain a system, and whether its structure stays recoverable under load.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SCFL – Standard Coherence Fidelity Layer">
+<meta name="theme-color" content="#0e1b33">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<!-- site-header:start -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="SCFL, Standard Coherence Fidelity Layer: home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#b3261e" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#0e1b33"/><circle cx="5" cy="34" r="3.6" fill="#0e1b33"/>
+        <circle cx="35" cy="34" r="3.6" fill="#0e1b33"/><circle cx="20" cy="24" r="3.6" fill="#0e1b33"/>
+      </svg>
+      <span class="brand-text"><span class="brand-name">SCFL</span><span class="brand-full">Standard Coherence Fidelity Layer</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item" data-section="about">
+          <button class="nav-button is-current" type="button" aria-expanded="false" aria-controls="menu-about">About SCFL <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-about">
+            <li><a href="index.html" aria-current="page"><span class="sm-title">Overview</span><span class="sm-desc">What SCFL measures, in brief</span></a></li>
+            <li><a href="measurement-problem.html"><span class="sm-title">The measurement problem</span><span class="sm-desc">Why sound parts can sit inside a failing structure</span></a></li>
+            <li><a href="approach.html"><span class="sm-title">The SCFL approach</span><span class="sm-desc">The construct, the instrument, and what each one claims</span></a></li>
+            <li><a href="index.html#is-and-is-not"><span class="sm-title">What SCFL is and is not</span><span class="sm-desc">Including why it is not an early warning system</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="applications">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-applications">Applications <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-applications">
+            <li><a href="applications.html"><span class="sm-title">Applications and case studies</span><span class="sm-desc">Domains studied so far, with evidence status</span></a></li>
+            <li><a href="case-texas-grid.html"><span class="sm-title">Texas grid, February 2021</span><span class="sm-desc">Winter Storm Uri, read retrospectively</span></a></li>
+            <li><a href="case-fukushima.html"><span class="sm-title">Fukushima Daiichi, 2011</span><span class="sm-desc">A cascade across four units and many years</span></a></li>
+            <li><a href="measurement-as-a-service.html"><span class="sm-title">Measurement as a Service</span><span class="sm-desc">How organizations could read SCFL on their own data</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="research">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-research">Research <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-research">
+            <li><a href="research.html"><span class="sm-title">Research program</span><span class="sm-desc">The sequence of tests and how the program could fail</span></a></li>
+            <li><a href="research.html#evidence-status"><span class="sm-title">Evidence status</span><span class="sm-desc">What is demonstrated, exploratory, hypothesized or planned</span></a></li>
+            <li><a href="papers.html"><span class="sm-title">Publications</span><span class="sm-desc">Papers and preprints, with DOIs</span></a></li>
+            <li><a href="videos.html"><span class="sm-title">Videos</span><span class="sm-desc">Short films from the program</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="collaborate">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-collaborate">Collaborate <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-collaborate">
+            <li><a href="collaborate.html"><span class="sm-title">Collaboration and contact</span><span class="sm-desc">For researchers, domain partners and organizations</span></a></li>
+            <li><a href="one-question.html"><span class="sm-title">One Question Challenge</span><span class="sm-desc">A low-commitment first structural reading</span></a></li>
+            <li><a href="register.html"><span class="sm-title">Register for the challenge</span><span class="sm-desc">For officers and board members</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+      </ul>
+      <a class="nav-cta" href="collaborate.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- site-header:end -->
+<main id="main" tabindex="-1">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>SCFL measures the geometry of relational coherence in a system’s state space.</h1>
+      <p class="lede">It characterizes how a system’s relationships are organized, how they constrain the configurations the system can occupy, and whether that structure remains recoverable under load. SCFL is a measurement approach. It is not an early warning system.</p>
+      <div class="actions">
+        <a class="btn" href="https://doi.org/10.5281/zenodo.23247214">Read the foundational paper</a>
+        <a class="btn btn--quiet" href="approach.html">See how the measurement works</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <svg viewBox="0 0 440 400" role="img" aria-labelledby="hero-g-t hero-g-d">
+  <title id="hero-g-t">A relational structure with one negative relation</title>
+  <desc id="hero-g-d">Four parts joined by six relations. Five relations are positive and one, from the top part to the centre part, is negative. The two triangles that contain the negative relation are shaded because their relations cannot all be satisfied together.</desc>
+  <polygon class="g-cycle frustrated" points="220,40 50,350 220,250"/>
+  <polygon class="g-cycle frustrated" points="220,40 390,350 220,250"/>
+  <polygon class="g-cycle" points="50,350 390,350 220,250"/>
+  <line class="g-edge" x1="220" y1="40" x2="50" y2="350"/><line class="g-edge" x1="220" y1="40" x2="390" y2="350"/><line class="g-edge" x1="50" y1="350" x2="390" y2="350"/><line class="g-edge" x1="220" y1="250" x2="50" y2="350"/><line class="g-edge" x1="220" y1="250" x2="390" y2="350"/><line class="g-edge neg" x1="220" y1="250" x2="220" y2="40"/>
+  <circle class="g-node" cx="220" cy="40" r="13"/><circle class="g-node" cx="50" cy="350" r="13"/><circle class="g-node" cx="390" cy="350" r="13"/><circle class="g-node" cx="220" cy="250" r="13"/>
+</svg>
+      <figcaption>Six relations, each acceptable on its own. The two shaded cycles cannot be made consistent: the defect lies in how the relations combine, not in any single one.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band band--tight">
+  <div class="wrap">
+    <figure class="definition">
+      <blockquote>
+        <p>“Coherence is the degree to which the relationships within a system mutually hold one another in place.”</p>
+      </blockquote>
+      <figcaption>Working definition, from Brogdon and Rubio, <a href="https://doi.org/10.5281/zenodo.23247214"><cite>Coherence as a Relational Property: Toward a Foundational Science of Coherence</cite></a>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="not-ews">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="not-ews">Measurement, not warning</h2>
+      <p>The distinction is not a matter of terminology. It changes the scientific object being measured.</p>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
+      <table class="data-table compare">
+        <caption class="visually-hidden">Early warning systems compared with SCFL</caption>
+        <thead><tr><th scope="col"><span class="visually-hidden">Aspect</span></th><th scope="col">Early warning systems</th><th scope="col">SCFL</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What it looks at</th><td data-label="Early warning systems">Indicators that a system may be approaching a failure threshold</td><td data-label="SCFL">The geometric organization of relationships within the system’s state space, including how they constrain the configurations it can take</td></tr>
+          <tr><th scope="row">Primary activity</th><td data-label="Early warning systems">Generating warnings</td><td data-label="SCFL">Measurement and characterization</td></tr>
+          <tr><th scope="row">Prediction</th><td data-label="Early warning systems">The defining purpose</td><td data-label="SCFL">A possible downstream use, only where separately validated</td></tr>
+          <tr><th scope="row">Place among existing methods</th><td data-label="Early warning systems">Signals that failure may be approaching</td><td data-label="SCFL">Measures something upstream of performance indicators and failure warnings; complements them rather than competing as another warning system</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose mt-2">The difference is between looking for signs of an impending event and characterizing the underlying structure that determines what states a system can occupy and return from. Drift detection, state-transition analysis, recoverability assessment and, possibly, prediction may follow from the measurement. They are not its defining purpose.</p>
+    <div class="callout mt-2">
+      <p><strong>The measurement object is proposed, not yet proven.</strong> Whether a particular metric succeeds in measuring it is an empirical question, and the program treats it as one.</p>
+      <p><a href="research.html#evidence-status">See where the evidence stands</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="is-and-is-not" aria-labelledby="isnot-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="isnot-h">What SCFL is, and is not</h2>
+    </div>
+    <div class="isnot">
+      <div class="is">
+        <h3>SCFL is</h3>
+        <ul>
+          <li><strong>A measurement instrument</strong><span>It characterizes structural coherence and recoverability.</span></li>
+          <li><strong>An additional structural layer</strong><span>It sits above existing data and describes structural properties that operational systems do not report.</span></li>
+          <li><strong>Read on existing operational data</strong><span>It works with data an organization already holds. No new collection is required.</span></li>
+          <li><strong>Upstream of performance metrics</strong><span>It characterizes the structure beneath the indicators a system already tracks.</span></li>
+        </ul>
+      </div>
+      <div class="not">
+        <h3>SCFL is not</h3>
+        <ul>
+          <li><strong>Software you install</strong><span>It is not a downloadable tool or an on-premises application.</span></li>
+          <li><strong>A platform replacement</strong><span>It does not replace existing data systems.</span></li>
+          <li><strong>A dashboard or risk model</strong><span>It adds a structural view alongside them rather than replacing them.</span></li>
+          <li><strong>An early warning system</strong><span>It does not generate alarms or thresholds. It characterizes structural integrity.</span></li>
+          <li><strong>A new sensor network</strong><span>It does not require new instrumentation.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="prose muted">SCFL does not replace established engineering, actuarial, clinical or operational frameworks. It is designed to sit alongside them.</p>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="components-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="components-h">Three structural properties</h2>
+      <p>The working definition is unpacked into three properties. How they combine is itself a testable question, so systems are compared on all three rather than collapsed into one score.</p>
+    </div>
+    <div class="components">
+      <div class="component">
+        <div class="sym" aria-hidden="true">I</div>
+        <h3>Integration</h3>
+        <p>Whether the parts form one relational structure rather than a collection of components. Being connected is not enough.</p>
+      </div>
+      <div class="component">
+        <div class="sym" aria-hidden="true">K<sub>m</sub></div>
+        <h3>Mutual constraint</h3>
+        <p>Whether the relationships limit and depend on one another, so that changing one alters what the others can be. Pairwise measures cannot capture this.</p>
+      </div>
+      <div class="component">
+        <div class="sym" aria-hidden="true">R<sub>e</sub></div>
+        <h3>Recoverability</h3>
+        <p>The structural capacity to restore organization after perturbation, read from the structure before anyone knows whether recovery occurs.</p>
+      </div>
+    </div>
+    <div class="actions"><a class="btn btn--quiet" href="approach.html">Read about the approach</a></div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="evidence-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="evidence-h">Where the evidence stands</h2>
+      <p>Results on this site are labeled by evidence status, so it is always clear what has been shown and what has not.</p>
+    </div>
+    <ul class="status-list">
+      <li><div><span class="status status--demo">Demonstrated (synthetic)</span></div><p>Pairwise scores are blind to defects in mutual constraint. Across 180 random signed graphs, the frustration index varied at fixed pairwise statistics in 93 percent of conditions.</p></li>
+      <li><div><span class="status status--explore">Exploratory</span></div><p>SCFL has produced structured observations of relational change in electrical grids, cascades, human interior states, and financial, organizational, healthcare and maritime systems. These have not yet been independently replicated.</p></li>
+      <li><div><span class="status status--hypo">Hypothesis</span></div><p>Recoverability, estimated by the coherence-capacity vector CCV(t), relates to observed recovery. This has not yet been validated.</p></li>
+      <li><div><span class="status status--plan">Planned</span></div><p>A pre-registered empirical test of whether higher-order structure carries information that pairwise measures miss.</p></li>
+    </ul>
+    <div class="actions"><a class="btn btn--quiet" href="research.html">Read the research program</a></div>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="seats-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="seats-h">Work with the program</h2>
+      <p>The program is built to be tested, and it needs people who can test it.</p>
+    </div>
+    <div class="seats">
+      <div class="seat"><h3>Researchers and grant partners</h3><p>Independent replication, pre-registered tests and work on the open problems of boundaries and invariance.</p></div>
+      <div class="seat"><h3>Domain collaborators</h3><p>Grid operators, hospital systems, insurers and infrastructure owners with past events they understand and data they already hold.</p></div>
+      <div class="seat"><h3>Commercial partners</h3><p>Organizations that want a structural reading on their own data, starting with one plate they already own.</p></div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="collaborate.html">Ways to collaborate</a>
+      <a class="btn btn--quiet" href="collaborate.html#contact">Contact the program</a>
+    </div>
+  </div>
+</section>
+</main>
+<!-- site-footer:start -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#ff8a80" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#ffffff"/><circle cx="5" cy="34" r="3.6" fill="#ffffff"/>
+        <circle cx="35" cy="34" r="3.6" fill="#ffffff"/><circle cx="20" cy="24" r="3.6" fill="#ffffff"/>
+      </svg>
+      <div>
+        <strong>Standard Coherence Fidelity Layer</strong>
+        <p>An independent research program originated by Ronald L. Brogdon, Upstream Coherence Measurement Stratum (UCMS).</p>
+      </div>
+    </div>
+    <div>
+      <h2>Research</h2>
+      <ul>
+        <li><a href="https://doi.org/10.5281/zenodo.23247214">Foundational paper (DOI)</a></li>
+        <li><a href="papers.html">All publications</a></li>
+        <li><a href="research.html#evidence-status">Evidence status</a></li>
+        <li><a href="https://orcid.org/0009-0009-0507-2971">ORCID record for Ronald L. Brogdon</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>About</h2>
+      <ul>
+        <li><a href="measurement-problem.html">The measurement problem</a></li>
+        <li><a href="approach.html">The SCFL approach</a></li>
+        <li><a href="applications.html">Applications and case studies</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="collaborate.html">Collaborate with the program</a></li>
+        <li><a href="one-question.html">One Question Challenge</a></li>
+        <li><a href="mailto:measurement@coherencemanagement.org">measurement@coherencemanagement.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year">2026</span> Ronald L. Brogdon. All rights reserved.</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+<!-- site-footer:end -->
+</body>
+</html>

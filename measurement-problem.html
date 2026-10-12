@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Measurement Problem – SCFL</title>
+<meta name="description" content="Why performance metrics and pairwise scores miss how a system&#x27;s relationships hold one another in place, with a worked example you can try.">
+<meta property="og:title" content="The Measurement Problem – SCFL">
+<meta property="og:description" content="Why performance metrics and pairwise scores miss how a system&#x27;s relationships hold one another in place, with a worked example you can try.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SCFL – Standard Coherence Fidelity Layer">
+<meta name="theme-color" content="#0e1b33">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<!-- site-header:start -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="SCFL, Standard Coherence Fidelity Layer: home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#0e1b33" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#b3261e" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#0e1b33"/><circle cx="5" cy="34" r="3.6" fill="#0e1b33"/>
+        <circle cx="35" cy="34" r="3.6" fill="#0e1b33"/><circle cx="20" cy="24" r="3.6" fill="#0e1b33"/>
+      </svg>
+      <span class="brand-text"><span class="brand-name">SCFL</span><span class="brand-full">Standard Coherence Fidelity Layer</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item" data-section="about">
+          <button class="nav-button is-current" type="button" aria-expanded="false" aria-controls="menu-about">About SCFL <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-about">
+            <li><a href="index.html"><span class="sm-title">Overview</span><span class="sm-desc">What SCFL measures, in brief</span></a></li>
+            <li><a href="measurement-problem.html" aria-current="page"><span class="sm-title">The measurement problem</span><span class="sm-desc">Why sound parts can sit inside a failing structure</span></a></li>
+            <li><a href="approach.html"><span class="sm-title">The SCFL approach</span><span class="sm-desc">The construct, the instrument, and what each one claims</span></a></li>
+            <li><a href="index.html#is-and-is-not"><span class="sm-title">What SCFL is and is not</span><span class="sm-desc">Including why it is not an early warning system</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="applications">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-applications">Applications <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-applications">
+            <li><a href="applications.html"><span class="sm-title">Applications and case studies</span><span class="sm-desc">Domains studied so far, with evidence status</span></a></li>
+            <li><a href="case-texas-grid.html"><span class="sm-title">Texas grid, February 2021</span><span class="sm-desc">Winter Storm Uri, read retrospectively</span></a></li>
+            <li><a href="case-fukushima.html"><span class="sm-title">Fukushima Daiichi, 2011</span><span class="sm-desc">A cascade across four units and many years</span></a></li>
+            <li><a href="measurement-as-a-service.html"><span class="sm-title">Measurement as a Service</span><span class="sm-desc">How organizations could read SCFL on their own data</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="research">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-research">Research <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-research">
+            <li><a href="research.html"><span class="sm-title">Research program</span><span class="sm-desc">The sequence of tests and how the program could fail</span></a></li>
+            <li><a href="research.html#evidence-status"><span class="sm-title">Evidence status</span><span class="sm-desc">What is demonstrated, exploratory, hypothesized or planned</span></a></li>
+            <li><a href="papers.html"><span class="sm-title">Publications</span><span class="sm-desc">Papers and preprints, with DOIs</span></a></li>
+            <li><a href="videos.html"><span class="sm-title">Videos</span><span class="sm-desc">Short films from the program</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+        <li class="nav-item" data-section="collaborate">
+          <button class="nav-button" type="button" aria-expanded="false" aria-controls="menu-collaborate">Collaborate <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="submenu" id="menu-collaborate">
+            <li><a href="collaborate.html"><span class="sm-title">Collaboration and contact</span><span class="sm-desc">For researchers, domain partners and organizations</span></a></li>
+            <li><a href="one-question.html"><span class="sm-title">One Question Challenge</span><span class="sm-desc">A low-commitment first structural reading</span></a></li>
+            <li><a href="register.html"><span class="sm-title">Register for the challenge</span><span class="sm-desc">For officers and board members</span></a></li>
+          </ul>
+        </li><!-- /nav-item -->
+      </ul>
+      <a class="nav-cta" href="collaborate.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- site-header:end -->
+<main id="main" tabindex="-1">
+<div class="page-head">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">The measurement problem</li></ol></nav>
+    <h1>The measurement problem</h1>
+    <p class="lede">Conventional metrics report what a system produces. They do not report whether the relationships producing it still hold one another in place.</p>
+    
+  </div>
+</div>
+<section class="band">
+  <div class="wrap split split--2">
+    <div class="prose">
+      <h2>Sound parts, failing structure</h2>
+      <p>A stone arch stays up only because each stone is held in place by the others. Every stone can be sound and the arch can still fall, because the failure lies in how the stones hold one another, not in any one stone.</p>
+      <p>A power grid shows the same thing in a working system. Every line can be within its limits while the network’s ability to absorb the loss of a line is shrinking. Output looks normal while the relationships that keep the system in place are coming loose.</p>
+    </div>
+    <div class="prose">
+      <h2>What gets measured today</h2>
+      <p>Performance is what a system produces. Stability is whether that output holds steady. Resilience, as usually measured, is whether the system persisted or recovered after a disturbance, which can only be known afterwards.</p>
+      <p>None of these is the condition of the relationships that produce the output. That condition is what the program calls coherence, and it is the quantity SCFL is designed to measure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="pairwise-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="pairwise-h">Why pairwise scores cannot see it</h2>
+      <p>Most measures score relationships one pair at a time and add the results. Three relationships can each be acceptable and still fail to hold together as a set. The failure lives in the cycle, not in any single relation.</p>
+    </div>
+    <figure class="figure">
+      <div class="pair">
+        <div>
+          <h3>Structure A</h3>
+          <svg viewBox="0 0 300 300" role="img" aria-labelledby="sa-t sa-d"><title id="sa-t">Structure A</title><desc id="sa-d">Four entities, six relations. Relations 1–2 and 3–4 are negative. All four triangles are frustrated; frustration index 2.</desc><polygon class="g-cycle frustrated" data-tri="0" points="50,50 250,50 50,250"/><polygon class="g-cycle frustrated" data-tri="1" points="50,50 250,50 250,250"/><polygon class="g-cycle frustrated" data-tri="2" points="50,50 50,250 250,250"/><polygon class="g-cycle frustrated" data-tri="3" points="250,50 50,250 250,250"/><line class="g-edge neg" data-edge="12" x1="50" y1="50" x2="250" y2="50"/><line class="g-edge" data-edge="13" x1="50" y1="50" x2="50" y2="250"/><line class="g-edge" data-edge="14" x1="50" y1="50" x2="250" y2="250"/><line class="g-edge" data-edge="23" x1="250" y1="50" x2="50" y2="250"/><line class="g-edge" data-edge="24" x1="250" y1="50" x2="250" y2="250"/><line class="g-edge neg" data-edge="34" x1="50" y1="250" x2="250" y2="250"/><circle class="g-node" cx="50" cy="50" r="17"/><text class="g-label" x="50" y="50">1</text><circle class="g-node" cx="250" cy="50" r="17"/><text class="g-label" x="250" y="50">2</text><circle class="g-node" cx="50" cy="250" r="17"/><text class="g-label" x="50" y="250">3</text><circle class="g-node" cx="250" cy="250" r="17"/><text class="g-label" x="250" y="250">4</text></svg>
+          <dl class="stats">
+            <dt>Signs (positive / negative)</dt><dd>4 / 2</dd>
+            <dt>Any pairwise-additive score</dt><dd class="same">identical</dd>
+            <dt>Frustrated triangles</dt><dd>4 of 4</dd>
+            <dt>Frustration index φ</dt><dd>2</dd>
+          </dl>
+        </div>
+        <div>
+          <h3>Structure B</h3>
+          <svg viewBox="0 0 300 300" role="img" aria-labelledby="sb-t sb-d"><title id="sb-t">Structure B</title><desc id="sb-d">Four entities, six relations. Relations 1–2 and 1–3 are negative. Two triangles are frustrated; frustration index 1.</desc><polygon class="g-cycle" data-tri="0" points="50,50 250,50 50,250"/><polygon class="g-cycle frustrated" data-tri="1" points="50,50 250,50 250,250"/><polygon class="g-cycle frustrated" data-tri="2" points="50,50 50,250 250,250"/><polygon class="g-cycle" data-tri="3" points="250,50 50,250 250,250"/><line class="g-edge neg" data-edge="12" x1="50" y1="50" x2="250" y2="50"/><line class="g-edge neg" data-edge="13" x1="50" y1="50" x2="50" y2="250"/><line class="g-edge" data-edge="14" x1="50" y1="50" x2="250" y2="250"/><line class="g-edge" data-edge="23" x1="250" y1="50" x2="50" y2="250"/><line class="g-edge" data-edge="24" x1="250" y1="50" x2="250" y2="250"/><line class="g-edge" data-edge="34" x1="50" y1="250" x2="250" y2="250"/><circle class="g-node" cx="50" cy="50" r="17"/><text class="g-label" x="50" y="50">1</text><circle class="g-node" cx="250" cy="50" r="17"/><text class="g-label" x="250" y="50">2</text><circle class="g-node" cx="50" cy="250" r="17"/><text class="g-label" x="50" y="250">3</text><circle class="g-node" cx="250" cy="250" r="17"/><text class="g-label" x="250" y="250">4</text></svg>
+          <dl class="stats">
+            <dt>Signs (positive / negative)</dt><dd>4 / 2</dd>
+            <dt>Any pairwise-additive score</dt><dd class="same">identical</dd>
+            <dt>Frustrated triangles</dt><dd>2 of 4</dd>
+            <dt>Frustration index φ</dt><dd>1</dd>
+          </dl>
+        </div>
+      </div>
+      <ul class="legend">
+  <li><span class="sw" aria-hidden="true"></span>Positive relation</li>
+  <li><span class="sw neg" aria-hidden="true"></span>Negative relation</li>
+  <li><span class="sw cyc" aria-hidden="true"></span>Frustrated cycle (cannot be made consistent)</li>
+</ul>
+      <figcaption><strong>Two structures no pairwise score can tell apart.</strong> Both have four entities, six relations and the same mix of signs, so any sum of per-relation scores returns the same value for both. The frustration index, the minimum number of relations whose sign must change for every cycle to be consistent, separates them: changing relation 1–4 alone balances Structure B, while Structure A needs two changes. Adapted from Figure 4 of the foundational paper.</figcaption>
+    </figure>
+
+    <div class="explorer-js mt-3" id="explorer">
+      <h3>Try it</h3>
+      <p class="prose">Flip any relation and watch the counts. The pairwise picture only changes when the number of negative relations changes. The frustration index can change while the pairwise picture stays exactly the same.</p>
+      <div class="explorer mt-2">
+        <div><svg viewBox="0 0 300 300" aria-hidden="true" focusable="false"><polygon class="g-cycle" data-tri="0" points="50,50 250,50 50,250"/><polygon class="g-cycle frustrated" data-tri="1" points="50,50 250,50 250,250"/><polygon class="g-cycle frustrated" data-tri="2" points="50,50 50,250 250,250"/><polygon class="g-cycle" data-tri="3" points="250,50 50,250 250,250"/><line class="hit" data-edge="12" x1="50" y1="50" x2="250" y2="50"/><line class="g-edge neg" data-edge="12" x1="50" y1="50" x2="250" y2="50"/><line class="hit" data-edge="13" x1="50" y1="50" x2="50" y2="250"/><line class="g-edge neg" data-edge="13" x1="50" y1="50" x2="50" y2="250"/><line class="hit" data-edge="14" x1="50" y1="50" x2="250" y2="250"/><line class="g-edge" data-edge="14" x1="50" y1="50" x2="250" y2="250"/><line class="hit" data-edge="23" x1="250" y1="50" x2="50" y2="250"/><line class="g-edge" data-edge="23" x1="250" y1="50" x2="50" y2="250"/><line class="hit" data-edge="24" x1="250" y1="50" x2="250" y2="250"/><line class="g-edge" data-edge="24" x1="250" y1="50" x2="250" y2="250"/><line class="hit" data-edge="34" x1="50" y1="250" x2="250" y2="250"/><line class="g-edge" data-edge="34" x1="50" y1="250" x2="250" y2="250"/><circle class="g-node" cx="50" cy="50" r="17"/><text class="g-label" x="50" y="50">1</text><circle class="g-node" cx="250" cy="50" r="17"/><text class="g-label" x="250" y="50">2</text><circle class="g-node" cx="50" cy="250" r="17"/><text class="g-label" x="50" y="250">3</text><circle class="g-node" cx="250" cy="250" r="17"/><text class="g-label" x="250" y="250">4</text></svg><ul class="legend">
+  <li><span class="sw" aria-hidden="true"></span>Positive relation</li>
+  <li><span class="sw neg" aria-hidden="true"></span>Negative relation</li>
+  <li><span class="sw cyc" aria-hidden="true"></span>Frustrated cycle (cannot be made consistent)</li>
+</ul></div>
+        <div>
+          <div class="presets" role="group" aria-label="Load an example">
+            <button type="button" class="preset" data-preset="a">Load structure A</button>
+            <button type="button" class="preset" data-preset="b">Load structure B</button>
+            <button type="button" class="preset" data-preset="none">All positive</button>
+          </div>
+          <fieldset class="toggles"><legend>Relations (press to flip the sign)</legend><button type="button" class="toggle" data-edge="12" aria-pressed="false">Relation 1–2<span class="t-state">positive</span></button><button type="button" class="toggle" data-edge="13" aria-pressed="false">Relation 1–3<span class="t-state">positive</span></button><button type="button" class="toggle" data-edge="14" aria-pressed="false">Relation 1–4<span class="t-state">positive</span></button><button type="button" class="toggle" data-edge="23" aria-pressed="false">Relation 2–3<span class="t-state">positive</span></button><button type="button" class="toggle" data-edge="24" aria-pressed="false">Relation 2–4<span class="t-state">positive</span></button><button type="button" class="toggle" data-edge="34" aria-pressed="false">Relation 3–4<span class="t-state">positive</span></button></fieldset>
+          <dl class="readout">
+            <dt>Signs (positive / negative)</dt><dd data-out="signs">4 / 2</dd>
+            <dt>Frustrated triangles</dt><dd data-out="tri">2 of 4</dd>
+            <dt>Frustration index φ</dt><dd class="big" data-out="phi">1</dd>
+            <dt>Normalized φ / |E|</dt><dd data-out="norm">1/6 ≈ 0.17</dd>
+          </dl>
+          <p class="visually-hidden" aria-live="polite" data-out="live"></p>
+          <p class="explorer-note">The index is computed exactly in your browser by checking every way of splitting the four entities into two groups.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="synthetic-h">
+  <div class="wrap">
+    <div class="rail-block">
+      <div class="rail-meta"><span class="status status--demo">Demonstrated (synthetic)</span><br>Foundational paper, §4.6</div>
+      <div class="rail-body">
+        <h2 id="synthetic-h">Not a contrived case</h2>
+        <p>The example above is one case. To test whether it is typical, the program drew random signed graphs, held every pairwise statistic fixed, and varied only where the negative relations were placed.</p>
+        <p>Across 180 random graphs, the frustration index still varied in 840 of 900 conditions (93.3 percent). In a third of conditions, the same pairwise statistics produced both perfectly balanced and frustrated structures. Counting local triangles did not recover the global index either.</p>
+        <p class="muted"><strong>Limit.</strong> These are random graphs with uniform weights and arbitrary signs. They show that pairwise blindness is pervasive in principle. Whether it matters in measured systems is the next test, which has not yet been run.</p>
+      </div>
+    </div>
+    <div class="rail-block">
+      <div class="rail-meta"><span class="status status--demo">Demonstrated (synthetic)</span><br>Foundational paper, §6.4</div>
+      <div class="rail-body">
+        <h2>Where you draw the box changes the answer</h2>
+        <p>Any measurement needs a boundary: a feeder or a region, a department or a hospital. If the measured value changes with the box rather than with the system, it describes the researcher’s choice, not the system.</p>
+        <p>In a synthetic test with two planted clusters, the choice of box accounted for 66 percent of the variance in measured frustration under loose coupling and 77 percent under tight coupling. A common rule for deriving the box automatically recovered the clusters in 151 of 200 loosely coupled systems, but in only 15 of 200 tightly coupled ones, which is when boundaries matter most.</p>
+        <p class="muted"><strong>What this means.</strong> The boundary problem is a live risk, not a formality. It is listed as falsification condition F3, and it is not yet solved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--mist" aria-labelledby="stages-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="stages-h">How coherence comes apart</h2>
+      <p>Under load, relationships first deform while every part stays connected, then reorganize as some are lost and new dependencies form. Throughout, conventional outcome indicators may look normal.</p>
+    </div>
+    <div class="stages" role="table" aria-label="Stages of coming apart, with what each kind of measurement registers">
+      <div class="stages-row stages-head" role="row">
+        <span role="columnheader"><span class="visually-hidden">Track</span></span>
+        <span role="columnheader">1. Baseline</span><span role="columnheader">2. Deformation</span><span role="columnheader">3. Reorganization</span><span role="columnheader">Outcome</span>
+      </div>
+      <div class="stages-row" role="row">
+        <span class="rowlabel" role="rowheader">The structure</span>
+        <span role="cell"><span class="stage-name">1. Baseline</span>Relationships hold one another in place</span>
+        <span role="cell"><span class="stage-name">2. Deformation</span>Relationships stretch; all parts still connected</span>
+        <span role="cell"><span class="stage-name">3. Reorganization</span>Some relationships lost; new dependencies form</span>
+        <span role="cell"><span class="stage-name">Outcome</span>Structure restored, or critical relations lost</span>
+      </div>
+      <div class="stages-row" role="row">
+        <span class="rowlabel" role="rowheader">SCFL measurement</span>
+        <span class="quiet" role="cell"><span class="stage-name">1. Baseline</span>Baseline structure</span>
+        <span class="scfl" role="cell"><span class="stage-name">2. Deformation</span>May register relational change</span>
+        <span class="scfl" role="cell"><span class="stage-name">3. Reorganization</span>Recoverability read from the structure, before the outcome is known</span>
+        <span class="quiet" role="cell"><span class="stage-name">Outcome</span>Compared with the observed outcome afterwards</span>
+      </div>
+      <div class="stages-row" role="row">
+        <span class="rowlabel" role="rowheader">Conventional outcome indicators</span>
+        <span class="quiet" role="cell"><span class="stage-name">1. Baseline</span>Normal</span>
+        <span class="quiet" role="cell"><span class="stage-name">2. Deformation</span>May remain normal</span>
+        <span class="quiet" role="cell"><span class="stage-name">3. Reorganization</span>May remain normal</span>
+        <span class="quiet" role="cell"><span class="stage-name">Outcome</span>Register at failure</span>
+      </div>
+    </div>
+    <p class="muted mt-2"><small>Schematic, not data. Timing is illustrative; when the lowest point of the coherence series falls relative to other features is an open question.</small></p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="neighbors-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="neighbors-h">Close to coherence, but not the same thing</h2>
+      <p>Each of these may correlate with coherence, cause it or follow from it. None is assumed to be it.</p>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
+      <table class="data-table">
+        <thead><tr><th scope="col">Idea</th><th scope="col">How it differs</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Performance</th><td>Performance is what a system produces, not the condition of the relationships that produce it.</td></tr>
+          <tr><th scope="row">Stability</th><td>Output can be stable while the relationships beneath it are coming loose.</td></tr>
+          <tr><th scope="row">Resilience</th><td>Resilience is observed persistence or recovery after a disturbance. Recoverability is the structural capacity measured beforehand.</td></tr>
+          <tr><th scope="row">Order</th><td>A structure can be highly regular while its relationships fail to hold one another in place.</td></tr>
+          <tr><th scope="row">Equilibrium</th><td>Adaptive systems hold together while exchanging energy, material and information.</td></tr>
+          <tr><th scope="row">Quantum coherence</th><td>It has a rigorous, domain-specific meaning. No identity with it is claimed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout--plain mt-2">
+      <p><strong>What this page does not claim.</strong> It does not claim that coherence is a law of nature, that any single score constitutes it, that the boundary problem is solved, or that measured coherence necessarily predicts failure.</p>
+    </div>
+    <div class="actions"><a class="btn" href="approach.html">Next: the SCFL approach</a></div>
+  </div>
+</section>
+</main>
+<!-- site-footer:start -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M20 4 L5 34 L35 34 Z" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M5 34 L20 24 L35 34" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M20 4 L20 24" stroke="#ff8a80" stroke-width="2.6"/>
+        <circle cx="20" cy="4.5" r="3.6" fill="#ffffff"/><circle cx="5" cy="34" r="3.6" fill="#ffffff"/>
+        <circle cx="35" cy="34" r="3.6" fill="#ffffff"/><circle cx="20" cy="24" r="3.6" fill="#ffffff"/>
+      </svg>
+      <div>
+        <strong>Standard Coherence Fidelity Layer</strong>
+        <p>An independent research program originated by Ronald L. Brogdon, Upstream Coherence Measurement Stratum (UCMS).</p>
+      </div>
+    </div>
+    <div>
+      <h2>Research</h2>
+      <ul>
+        <li><a href="https://doi.org/10.5281/zenodo.23247214">Foundational paper (DOI)</a></li>
+        <li><a href="papers.html">All publications</a></li>
+        <li><a href="research.html#evidence-status">Evidence status</a></li>
+        <li><a href="https://orcid.org/0009-0009-0507-2971">ORCID record for Ronald L. Brogdon</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>About</h2>
+      <ul>
+        <li><a href="measurement-problem.html">The measurement problem</a></li>
+        <li><a href="approach.html">The SCFL approach</a></li>
+        <li><a href="applications.html">Applications and case studies</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="collaborate.html">Collaborate with the program</a></li>
+        <li><a href="one-question.html">One Question Challenge</a></li>
+        <li><a href="mailto:measurement@coherencemanagement.org">measurement@coherencemanagement.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year">2026</span> Ronald L. Brogdon. All rights reserved.</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+<!-- site-footer:end -->
+<script src="assets/js/frustration.js" defer></script>
+</body>
+</html>
